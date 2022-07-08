@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;600&family=Libre+Franklin:wght@300;500&display=swap"
+    rel="stylesheet">
+  <title>Weather</title>
+</head>
+
+<body>
+  <div class="container-full">
+    <header>
+      <div class="container-search">
+        <form class="search" id="search-form">
+          <div class="row">
+            <input class="search-city" id="city-input" type="text" autofocus="on" name="enter city"
+              placeholder="🔎 Search / change the city">
+            <button class="btn-search" type="submit">Search</button>
+          </div>
+        </form>
+        <div class="row">
+
+          <ul class="proposalCities">
+            <li>London</li>
+            <li>Berlin</li>
+            <li>Madrid</li>
+            <li>Paris</li>
+            <li>Rome</li>
+            <button class="btn-current" type="submit">Current</button>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <table class="container-current">
+          <tr>
+            <td colspan="2" class="main-city">
+              <span id="current-city">Kyiv</span>,
+              <span class="main-small" id="current-country">Ukraine</span>
+            </td>
+            <td class="degree-right"><a href="#" id="celsius">°C </a>| <a href="#" id="farenheit">°F</a></td>
+          </tr>
+          <tr>
+            <td class="current-data" id="current-data">10 June 2022</td>
+            <td class="emoji-big" id="current-condition">
+              ☀️
+            </td>
+            <td class="emoji-big">
+              🌡️ <span id="current-temp">28 °C</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="current-data" id="current-day-time">Thursday 15:36</td>
+            <td class="darkgrey" id="cur-humid">humidity 45%</td>
+            <td class="darkgrey" id="cur-wind">wind 5 km/h</td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <hr />
+    <footer>
+      <div class="container-forecast">
+        <table style="width:100%">
+          <tr class="forecast-data">
+            <td class="right-border">11.06 <br /> Friday</td>
+            <td class="right-border">12.06 <br />Saturday</td>
+            <td class="right-border">13.06 <br />Sunday</td>
+            <td class="right-border">14.06 <br />Monday</td>
+            <td>15.06 <br />Tuesday</td>
+          </tr>
+          <tr class="forecast-emoji">
+            <td class="right-border">☀️</td>
+            <td class="right-border">☀️</td>
+            <td class="right-border">⛅</td>
+            <td class="right-border">🌧️</td>
+            <td>⛅</td>
+          </tr>
+          <tr class="forecast-temperature">
+            <td class="right-border"><span class="small">18°</span>|<strong>28°</strong></td>
+            <td class="right-border"><span class="small">18°</span>|<strong>28°</strong></td>
+            <td class="right-border"><span class="small">18°</span>|<strong>28°</strong></td>
+            <td class="right-border"><span class="small">18°</span>|<strong>28°</strong></td>
+            <td><span class="small">18°</span>|<strong>28°</strong></td>
+          </tr>
+        </table>
+      </div>
+    </footer>
+    <p>coded by <a class="coder" href="https://www.shecodes.io/students/730-hanna-veselova/" target="_blank">Hanna
+        Veselova</a> as part of the
+      <a class="shecodes" href="https://www.shecodes.io/" target="_blank">SheCodes</a> courses
+    </p>
+  </div>
+  <script src="scriptw5.js">
+  </script>
+
+</body>
+
+</html>

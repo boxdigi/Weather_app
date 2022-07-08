@@ -1,0 +1,219 @@
+.container-full {
+  max-width: fit-content;
+  border: 2px solid rgb(77, 192, 245);
+  padding: 20px 20px 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
+}
+
+form.search {
+  width: 100%;
+  align-items: center;
+}
+
+input.search-city {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.9);
+  width: 75%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  margin-left: 10px;
+  padding: 5px;
+  box-shadow: 2px 2px 2px rgb(77, 192, 245, 0.3);
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.btn-search {
+  color: rgba(48, 41, 41, 0.95);
+  font-size: 16px;
+  height: auto;
+  margin: 2px;
+  padding: 5px;
+  background-color: rgb(77, 192, 245);
+  border: 1px solid rgb(77, 192, 245, 0.8);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-family: "Libre Franklin", sans-serif;
+}
+
+button.btn-search:hover {
+  background-color: rgb(77, 192, 245, 0.3);
+  color: lightslategray;
+  cursor: pointer;
+}
+
+.btn-current {
+  color: rgba(48, 41, 41, 0.95);
+  font-size: 14px;
+
+  height: auto;
+  margin: 2px auto 2px 50px;
+
+  padding: 5px;
+  position: relative;
+  background-color: rgb(98, 197, 111, 0.8);
+  border: 1px solid rgb(98, 197, 111, 0.8);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-family: "Libre Franklin", sans-serif;
+}
+
+button.btn-current:hover {
+  background-color: rgba(166, 240, 221, 0.589);
+  color: lightslategray;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 16px;
+  color: blue;
+}
+
+ul.proposalCities li {
+  display: inline;
+  margin: 5px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
+
+li:hover {
+  color: blueviolet;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+table.container-current {
+  border-collapse: collapse;
+  border: 2px solid rgba(77, 192, 245);
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 5px;
+  background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, rgb(193, 222, 252, 0.3) 100%);
+}
+
+table.container-current:hover {
+  box-shadow: 3px 3px 3px rgb(77, 192, 245, 0.3);
+}
+
+.container-current td,
+tr {
+  padding: 2px;
+  border: 1px dotted rgba(80, 77, 80, 0.1);
+
+}
+
+td.degree-right {
+  margin-right: 5px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+#celsius,
+#farenheit {
+  text-decoration: none;
+  color: lightslategray;
+}
+
+#celsius:hover,
+#farenheit:hover {
+  color: rgb(161, 65, 225);
+  text-decoration: underline;
+}
+
+.main-city {
+  text-indent: 10px;
+  font-weight: bold;
+  padding-left: 5px;
+  font-size: 30px;
+  text-align: left;
+  color: rgba(48, 41, 41, 0.95);
+  font-family: "Baloo Bhaijaan 2", cursive;
+  text-shadow: 2px 2px 2px rgb(77, 192, 245, 0.3);
+}
+
+.current-data {
+  color: rgba(48, 41, 41, 0.95);
+  font-size: 16px;
+  font-family: "Libre Franklin", sans-serif;
+  text-align: left;
+  vertical-align: bottom;
+  text-indent: 10px;
+}
+
+.main-small {
+  font-size: 26px;
+  font-weight: lighter;
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
+
+td.darkgrey {
+  color: rgba(48, 41, 41, 0.85);
+  font-size: 13px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+td.emoji-big {
+  font-size: 32px;
+  color: rgba(48, 41, 41, 0.95);
+  font-family: "Baloo Bhaijaan 2", cursive;
+  font-weight: 700;
+  vertical-align: bottom;
+}
+
+.container-forecast table {
+  width: 75%;
+  margin: 5px auto;
+  border-collapse: collapse;
+  border: 2px solid rgb(77, 192, 245);
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.container-forecast td,
+tr {
+  padding: 10px;
+  text-align: center;
+}
+
+td.right-border {
+  border-right: 2px dotted lightslategray;
+}
+
+.forecast-data {
+  background-color: rgb(77, 192, 245, 0.1);
+  font-size: 15px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  line-height: 1.1;
+}
+
+.forecast-emoji {
+  font-size: 32px;
+}
+
+.forecast-temperature {
+  font-size: 15px;
+}
+
+.forecast-temperature .small {
+  font-size: 12px;
+}
+
+p {
+  margin-bottom: 0;
+  font-size: 12px;
+  text-align: right;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  color: blueviolet;
+}
+
+.coder:hover,
+.shecodes:hover {
+  text-decoration: underline;
+  color: red;
+  cursor: pointer;
+}
