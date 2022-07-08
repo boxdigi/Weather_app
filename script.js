@@ -104,27 +104,3 @@ function showPosition(position) {
 
 let currentLocation = document.querySelector("button.btn-current");
 currentLocation.addEventListener("click", handlePosition);
-
-
-
-//function convertionF(event) {
-//event.preventDefault();
-//let currT = document.querySelector("#current-temp");
-//let varT = 28;
-//let tempF = Math.round(varT * 1.8 + 32);
-//currT.innerHTML = `${tempF}°F`;
-//}
-
-//function convertionC(event) {
-//event.preventDefault();
-//let currT = document.querySelector("#current-temp");
-//let varT = 82;
-//let tempC = Math.round((varT - 32) / 1.8);
-//currT.innerHTML = `${tempC}°F`;
-//}
-
-//let convertF = document.querySelector("#farenheit");
-//convertF.addEventListener("click", convertionF);
-
-//let convertC = document.querySelector("#celsius");
-//convertC.addEventListener("click", convertionC);
