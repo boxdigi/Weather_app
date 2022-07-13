@@ -121,3 +121,12 @@ function convertionF(event) {
 
 let convertF = document.querySelector("#farenheit");
 convertF.addEventListener("click", convertionF);
+
+function convertionC(event) {
+  event.preventDefault();
+  let currT = document.querySelector("#current-temp");
+  currT.innerHTML = `${Math.round(celsiusTemp)}°`;
+}
+
+let convertC = document.querySelector("#celsius");
+convertC.addEventListener("click", convertionC);
