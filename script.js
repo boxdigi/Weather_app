@@ -72,7 +72,7 @@ function showCurrTemp(response) {
   country.innerHTML = response.data.sys.country;
 
   let currCondition = document.querySelector("#current-condition");
-  currCondition.innerHTML = response.data.weather[0].main;
+  currCondition.innerHTML = response.data.weather[0].description;
 
   let currentHumid = document.querySelector("#cur-humid");
   currentHumid.innerHTML = `humidity ${response.data.main.humidity}%`

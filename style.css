@@ -180,7 +180,7 @@ td.emoji-big {
   color: rgba(48, 41, 41, 0.95);
   font-family: "Baloo Bhaijaan 2", cursive;
   font-weight: 700;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 .container-forecast table {
