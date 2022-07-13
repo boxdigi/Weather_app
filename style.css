@@ -144,6 +144,25 @@ td.degree-right {
   text-indent: 10px;
 }
 
+td.description {
+  text-align: center;
+  vertical-align: center;
+  font-size: 16px;
+}
+
+#icon {
+  height: 75px;
+  width: 75px;
+}
+
+#current-condition {
+  font-size: 13px;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: bolder;
+  font-style: italic;
+  margin-top: 0;
+}
+
 .main-small {
   font-size: 26px;
   font-weight: lighter;
@@ -209,6 +228,11 @@ p {
   text-align: right;
   font-family: "Baloo Bhaijaan 2", cursive;
   color: blueviolet;
+}
+
+.coder {
+  text-decoration: none;
+  color: rgb(0, 110, 255);
 }
 
 .coder:hover {
