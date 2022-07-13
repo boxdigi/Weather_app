@@ -107,21 +107,41 @@ tr {
 
 }
 
-td.degree-right {
+.container-current .degree-right {
   margin-right: 5px;
   font-family: "Libre Franklin", sans-serif;
+  color: grey;
 }
 
 #celsius,
 #farenheit {
   text-decoration: none;
-  color: lightslategray;
+
 }
 
-#celsius:hover,
-#farenheit:hover {
-  color: rgb(161, 65, 225);
+.container-current .active {
+  color: black;
+  font-size: medium;
+  text-decoration: none;
+  cursor: default;
+  font-weight: bolder;
+}
+
+.container-current .active:hover {
+  text-decoration: none;
+}
+
+.container-current .passive {
+  color: gray;
+  font-size: small;
+  text-decoration: none;
+  cursor: default;
+}
+
+.container-current .passive:hover {
   text-decoration: underline;
+  color: blueviolet;
+  cursor: pointer;
 }
 
 .main-city {
