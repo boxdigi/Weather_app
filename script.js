@@ -64,7 +64,7 @@ function showCurrTemp(response) {
   console.log(response.data);
   let tempCur = document.querySelector("#current-temp");
   celsiusTemp = response.data.main.temp;
-  tempCur.innerHTML = `${Math.round(celsiusTemp)} °C`;
+  tempCur.innerHTML = `${Math.round(celsiusTemp)}°`;
 
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = response.data.name;
