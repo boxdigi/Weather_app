@@ -114,6 +114,10 @@ currentLocation.addEventListener("click", handlePosition);
 
 function convertionF(event) {
   event.preventDefault();
+  convertC.classList.remove("active");
+  convertC.classList.add("passive");
+  convertF.classList.remove("passive");
+  convertF.classList.add("active");
   let currT = document.querySelector("#current-temp");
   let tempF = Math.round(celsiusTemp * 1.8 + 32);
   currT.innerHTML = `${tempF}°`;
@@ -124,6 +128,10 @@ convertF.addEventListener("click", convertionF);
 
 function convertionC(event) {
   event.preventDefault();
+  convertF.classList.remove("active");
+  convertF.classList.add("passive");
+  convertC.classList.remove("passive");
+  convertC.classList.add("active");
   let currT = document.querySelector("#current-temp");
   currT.innerHTML = `${Math.round(celsiusTemp)}°`;
 }
