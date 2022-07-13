@@ -71,6 +71,10 @@ function showCurrTemp(response) {
   let country = document.querySelector("#current-country.main-small");
   country.innerHTML = response.data.sys.country;
 
+  let iconElement = document.querySelector("#icon");
+  let mark = response.data.weather[0].icon
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${mark}@2x.png`);
+
   let currCondition = document.querySelector("#current-condition");
   currCondition.innerHTML = response.data.weather[0].description;
 
