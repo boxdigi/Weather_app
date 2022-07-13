@@ -260,3 +260,7 @@ p {
   color: red;
   cursor: pointer;
 }
+
+.container-forecast {
+  opacity: 0.1;
+}
