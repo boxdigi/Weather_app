@@ -63,7 +63,8 @@ function inputCity(event) {
 function showCurrTemp(response) {
   console.log(response.data);
   let tempCur = document.querySelector("#current-temp");
-  tempCur.innerHTML = `${Math.round(response.data.main.temp)} °C`;
+  celsiusTemp = response.data.main.temp;
+  tempCur.innerHTML = `${Math.round(celsiusTemp)} °C`;
 
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = response.data.name;
@@ -106,6 +107,17 @@ function showPosition(position) {
     .then(showCurrTemp);
 }
 
+let celsiusTemp = null;
 
 let currentLocation = document.querySelector("button.btn-current");
 currentLocation.addEventListener("click", handlePosition);
+
+function convertionF(event) {
+  event.preventDefault();
+  let currT = document.querySelector("#current-temp");
+  let tempF = Math.round(celsiusTemp * 1.8 + 32);
+  currT.innerHTML = `${tempF}°`;
+}
+
+let convertF = document.querySelector("#farenheit");
+convertF.addEventListener("click", convertionF);
