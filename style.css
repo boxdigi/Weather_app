@@ -139,8 +139,8 @@ td.degree-right {
   color: rgba(48, 41, 41, 0.95);
   font-size: 16px;
   font-family: "Libre Franklin", sans-serif;
-  text-align: left;
-  vertical-align: bottom;
+  text-align: center;
+  vertical-align: middle;
   text-indent: 10px;
 }
 
