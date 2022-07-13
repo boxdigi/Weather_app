@@ -43,16 +43,17 @@ currentData.innerHTML = `${date} ${month} ${year}`;
 let currentTime = document.querySelector("#current-day-time");
 currentTime.innerHTML = `${day} ${hour}:${minute}`;
 
-let city = document.querySelector("#city-input");
+let cityDefault = "Kyiv";
+
 let apiKey = "481bc9bf97ae403a7ee70a4848c33bb8";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
-
+axios.get(`${apiUrl}q=${cityDefault}&appid=${apiKey}&units=metric`).then(showCurrTemp);
 
 function inputCity(event) {
   event.preventDefault();
+  let city = document.querySelector("#city-input");
   if (city.value) {
-    let countryInput = prompt("Please enter the country name");
-    axios.get(`${apiUrl}q=${city.value},${countryInput.value}&appid=${apiKey}&units=metric`).then(showCurrTemp);
+    axios.get(`${apiUrl}q=${city.value}&appid=${apiKey}&units=metric`).then(showCurrTemp);
   } else {
     alert(` Please enter a city`);
   }
