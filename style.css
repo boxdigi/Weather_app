@@ -161,7 +161,7 @@ tr {
   font-family: "Libre Franklin", sans-serif;
   text-align: center;
   vertical-align: middle;
-  text-indent: 10px;
+  text-indent: 5px;
 }
 
 td.description {
@@ -187,6 +187,13 @@ td.description {
   font-size: 26px;
   font-weight: lighter;
   font-family: "Baloo Bhaijaan 2", cursive;
+}
+
+#last-updated {
+  color: rgba(48, 41, 41, 0.85);
+  font-size: 12px;
+  font-style: italic;
+
 }
 
 td.darkgrey {
