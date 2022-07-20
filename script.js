@@ -44,7 +44,6 @@ let currentTime = document.querySelector("#current-day-time");
 currentTime.innerHTML = `${day} ${hour}:${minute}`;
 
 let cityDefault = "Kyiv";
-
 let apiKey = "481bc9bf97ae403a7ee70a4848c33bb8";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
 axios.get(`${apiUrl}q=${cityDefault}&appid=${apiKey}&units=metric`).then(showCurrTemp);
@@ -84,7 +83,7 @@ let currentLocation = document.querySelector("button.btn-current");
 currentLocation.addEventListener("click", handlePosition);
 
 function showCurrTemp(response) {
-  let tempCur = document.querySelector("#current-temp");
+  let tempCur = document.querySelector(".current-temp");
   tempCur.innerHTML = `🌡️ ${Math.round(response.data.main.temp)}°<br /><span class="realFeel">feels like ${Math.round(response.data.main.feels_like)}°</span>`;
 
   let currentCity = document.querySelector("#current-city");
