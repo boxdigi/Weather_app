@@ -37,11 +37,8 @@ let days = [
 day = days[now.getDay()];
 month = months[now.getMonth()];
 
-let currentData = document.querySelector("#current-data");
-currentData.innerHTML = `${date} ${month} ${year}`;
-
-let currentTime = document.querySelector("#current-day-time");
-currentTime.innerHTML = `${day} ${hour}:${minute}`;
+let currentData = document.querySelector(".current-data");
+currentData.innerHTML = `<span class="updated">Last updated:</span><br />${date} ${month} ${year}<br />${day} ${hour}:${minute}`;
 
 let cityDefault = "Kyiv";
 let apiKey = "481bc9bf97ae403a7ee70a4848c33bb8";
