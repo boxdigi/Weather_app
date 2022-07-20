@@ -165,3 +165,17 @@ function getFarenheit(event) {
 
 let convertF = document.querySelector("#farenheit");
 convertF.addEventListener("click", getFarenheit);
+
+function showCurrTempF(response) {
+  let tempCur = document.querySelector(".current-temp");
+  tempCur.innerHTML = `🌡️ ${Math.round(response.data.main.temp)}°<br /><span class="realFeel">feels like ${Math.round(response.data.main.feels_like)}°</span>`;
+
+  let currentWind = document.querySelector("#cur-wind");
+  currentWind.innerHTML = `wind ${Math.round(response.data.wind.speed)} mi/h`;
+  getForecastF(response.data.coord);
+}
+
+function getForecastF(coordinates) {
+  let apiUrlF = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`
+  axios.get(apiUrlF).then(showForecastTemp);
+}
