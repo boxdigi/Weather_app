@@ -179,3 +179,31 @@ function getForecastF(coordinates) {
   let apiUrlF = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`
   axios.get(apiUrlF).then(showForecastTemp);
 }
+
+function classListCelsiusActive() {
+  convertF.classList.remove("active");
+  convertF.classList.add("passive");
+  convertC.classList.remove("passive");
+  convertC.classList.add("active");
+}
+
+function classListFarenheihActive() {
+  convertC.classList.remove("active");
+  convertC.classList.add("passive");
+  convertF.classList.remove("passive");
+  convertF.classList.add("active");
+}
+
+let convertC = document.querySelector("#celsius");
+convertC.addEventListener("click", getCelsius);
+
+function getCelsius(event) {
+  event.preventDefault();
+  classListCelsiusActive();
+  let city = document.querySelector("#city-input");
+  if (city.value) {
+    axios.get(`${apiUrl}q=${city.value}&appid=${apiKey}&units=metric`).then(showCurrTemp);
+  } else {
+    axios.get(`${apiUrl}q=${cityDefault}&appid=${apiKey}&units=metric`).then(showCurrTemp);
+  }
+}
