@@ -113,7 +113,7 @@ tr {
   text-align: left;
   color: rgba(43, 67, 83);
   font-family: "Baloo Bhaijaan 2", cursive;
-  text-shadow: 2px 2px 2px rgb(95, 101, 104, 0.5);
+  text-shadow: 1px 1px 3px rgb(95, 101, 104, 0.5);
 }
 
 .city-header {
