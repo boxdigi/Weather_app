@@ -207,3 +207,14 @@ function getCelsius(event) {
     axios.get(`${apiUrl}q=${cityDefault}&appid=${apiKey}&units=metric`).then(showCurrTemp);
   }
 }
+
+let listCities = document.querySelectorAll('li');
+let cityinputList = document.querySelector('#city-input');
+listCities.forEach(function (listCity) {
+  listCity.addEventListener("click", (event) => {
+    let displayCity = event.target.textContent;
+    cityinputList.setAttribute("value", `${displayCity}`);
+    classListCelsiusActive();
+    axios.get(`${apiUrl}q=${cityinputList.value}&appid=${apiKey}&units=metric`).then(showCurrTemp);
+  });
+});
