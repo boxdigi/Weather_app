@@ -85,8 +85,7 @@ currentLocation.addEventListener("click", handlePosition);
 
 function showCurrTemp(response) {
   let tempCur = document.querySelector("#current-temp");
-  celsiusTemp = response.data.main.temp;
-  tempCur.innerHTML = `${Math.round(celsiusTemp)}°`;
+  tempCur.innerHTML = `🌡️ ${Math.round(response.data.main.temp)}°<br /><span class="realFeel">feels like ${Math.round(response.data.main.feels_like)}°</span>`;
 
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = response.data.name;
@@ -152,31 +151,17 @@ function showForecastTemp(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-let celsiusTemp = null;
-
-function convertionF(event) {
+function getFarenheit(event) {
   event.preventDefault();
-  convertC.classList.remove("active");
-  convertC.classList.add("passive");
-  convertF.classList.remove("passive");
-  convertF.classList.add("active");
-  let currT = document.querySelector("#current-temp");
-  let tempF = Math.round(celsiusTemp * 1.8 + 32);
-  currT.innerHTML = `${tempF}°`;
+  classListFarenheihActive();
+  let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
+  let city = document.querySelector("#city-input");
+  if (city.value) {
+    axios.get(`${apiUrl}q=${city.value}&appid=${apiKey}&units=imperial`).then(showCurrTempF);
+  } else {
+    axios.get(`${apiUrl}q=${cityDefault}&appid=${apiKey}&units=imperial`).then(showCurrTempF);
+  }
 }
 
 let convertF = document.querySelector("#farenheit");
-convertF.addEventListener("click", convertionF);
-
-function convertionC(event) {
-  event.preventDefault();
-  convertF.classList.remove("active");
-  convertF.classList.add("passive");
-  convertC.classList.remove("passive");
-  convertC.classList.add("active");
-  let currT = document.querySelector("#current-temp");
-  currT.innerHTML = `${Math.round(celsiusTemp)}°`;
-}
-
-let convertC = document.querySelector("#celsius");
-convertC.addEventListener("click", convertionC);
+convertF.addEventListener("click", getFarenheit);
