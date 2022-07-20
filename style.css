@@ -1,15 +1,11 @@
 .container-full {
-  max-width: fit-content;
+  max-width: 400px;
   border: 2px solid rgb(77, 192, 245);
   padding: 20px 20px 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   display: block;
   margin: 0 auto;
-}
-
-form.search {
-  width: 100%;
-  align-items: center;
+  border-radius: 10px;
 }
 
 input.search-city {
@@ -25,6 +21,7 @@ input.search-city {
   padding: 5px;
   box-shadow: 2px 2px 2px rgb(77, 192, 245, 0.3);
   font-family: "Libre Franklin", sans-serif;
+  margin-bottom: 2px;
 }
 
 .btn-search {
@@ -38,6 +35,8 @@ input.search-city {
   border-radius: 5px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   font-family: "Libre Franklin", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 button.btn-search:hover {
@@ -49,10 +48,8 @@ button.btn-search:hover {
 .btn-current {
   color: rgba(48, 41, 41, 0.95);
   font-size: 14px;
-
   height: auto;
-  margin: 2px auto 2px 50px;
-
+  margin: 2px auto 2px 25px;
   padding: 5px;
   position: relative;
   background-color: rgb(98, 197, 111, 0.8);
@@ -60,6 +57,7 @@ button.btn-search:hover {
   border-radius: 5px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   font-family: "Libre Franklin", sans-serif;
+  letter-spacing: 1px;
 }
 
 button.btn-current:hover {
@@ -73,9 +71,12 @@ ul {
   padding-left: 0;
   font-size: 16px;
   color: blue;
+  text-indent: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
-ul.proposalCities li {
+li {
   display: inline;
   margin: 5px;
   font-family: "Baloo Bhaijaan 2", cursive;
@@ -83,21 +84,19 @@ ul.proposalCities li {
 
 li:hover {
   color: blueviolet;
-  text-decoration: underline;
   cursor: pointer;
+}
+
+.container {
+  border-radius: 5px;
+  border: 2px solid rgba(77, 192, 245);
 }
 
 table.container-current {
   border-collapse: collapse;
-  border: 2px solid rgba(77, 192, 245);
   font-size: 14px;
   width: 100%;
   margin-bottom: 5px;
-  background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, rgb(193, 222, 252, 0.3) 100%);
-}
-
-table.container-current:hover {
-  box-shadow: 3px 3px 3px rgb(77, 192, 245, 0.3);
 }
 
 .container-current td,
@@ -111,6 +110,7 @@ tr {
   margin-right: 5px;
   font-family: "Libre Franklin", sans-serif;
   color: grey;
+  text-align: center;
 }
 
 #celsius,
@@ -135,7 +135,6 @@ tr {
   color: gray;
   font-size: small;
   text-decoration: none;
-  cursor: default;
 }
 
 .container-current .passive:hover {
@@ -160,8 +159,8 @@ tr {
   font-size: 16px;
   font-family: "Libre Franklin", sans-serif;
   text-align: center;
-  vertical-align: middle;
-  text-indent: 5px;
+  vertical-align: top;
+  line-height: 1.5;
 }
 
 td.description {
@@ -176,15 +175,15 @@ td.description {
 }
 
 #current-condition {
+  color: rgba(48, 41, 41, 0.6);
   font-size: 13px;
   font-family: "Libre Franklin", sans-serif;
-  font-weight: bolder;
+  font-weight: 400;
   font-style: italic;
-  margin-top: 0;
 }
 
 .main-small {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: lighter;
   font-family: "Baloo Bhaijaan 2", cursive;
 }
@@ -193,13 +192,15 @@ td.description {
   color: rgba(48, 41, 41, 0.85);
   font-size: 12px;
   font-style: italic;
-
+  font-weight: 300;
+  line-height: 2.5;
 }
 
 td.darkgrey {
   color: rgba(48, 41, 41, 0.85);
   font-size: 13px;
   font-family: "Libre Franklin", sans-serif;
+  text-align: center;
 }
 
 td.emoji-big {
