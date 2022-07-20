@@ -211,43 +211,64 @@ td.emoji-big {
   vertical-align: middle;
 }
 
-.container-forecast table {
-  width: 75%;
-  margin: 5px auto;
-  border-collapse: collapse;
-  border: 2px solid rgb(77, 192, 245);
-  letter-spacing: 1px;
-  font-size: 13px;
-  font-family: "Libre Franklin", sans-serif;
-}
-
-.container-forecast td,
-tr {
-  padding: 10px;
+.weather-forecast {
   text-align: center;
+  margin: 10px 0;
+  border: 2px solid rgb(156, 211, 211);
+  border-radius: 5px;
 }
 
-td.right-border {
-  border-right: 2px dotted lightslategray;
+.column {
+  width: 75px;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
 }
 
-.forecast-data {
-  background-color: rgb(77, 192, 245, 0.1);
-  font-size: 15px;
+.column:hover {
+  background-color: rgb(156, 211, 211, 0.08);
+}
+
+.weather-forecast-date {
+  background-color: rgb(156, 211, 211, 0.3);
+  border-color: rgb(156, 211, 211, 0.5);
+  border-radius: 3px;
+  color: rgb(43, 67, 83);
   font-family: "Baloo Bhaijaan 2", cursive;
   line-height: 1.1;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
-.forecast-emoji {
-  font-size: 32px;
+.forecast-day {
+  font-style: italic;
+  color: rgb(236, 110, 76, 0.75);
 }
 
-.forecast-temperature {
-  font-size: 15px;
+.weather-forecast img {
+  vertical-align: middle;
+  width: 50px;
 }
 
-.forecast-temperature .small {
-  font-size: 12px;
+.weather-forecast-temperature {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  color: rgb(43, 67, 83);
+}
+
+.weather-temperature-forecast-max {
+  font-weight: bolder;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  font-size: larger;
+}
+
+.weather-temperature-forecast-min {
+  font-family: "Baloo Bhaijaan 2", cursive;
+  margin-right: 2px;
+  opacity: 0.8;
+  font-size: medium;
 }
 
 p {
@@ -267,8 +288,4 @@ p {
   text-decoration: underline;
   color: red;
   cursor: pointer;
-}
-
-.container-forecast {
-  opacity: 0.1;
 }
