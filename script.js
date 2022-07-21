@@ -49,9 +49,13 @@ function inputCity(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input");
   if (city.value) {
-    axios.get(`${apiUrl}q=${city.value}&appid=${apiKey}&units=metric`).then(showCurrTemp);
+    axios.get(`${apiUrl}q=${city.value}&appid=${apiKey}&units=metric`).then(showCurrTemp,
+      function () {
+        alert('Requested city is not found in our list. Please try again 😉 or ask Google');
+      }
+    );
   } else {
-    alert(` Please enter a city`);
+    alert(` Please enter a city 🙃`);
   }
 }
 
@@ -61,25 +65,22 @@ searchCity.addEventListener("submit", inputCity);
 function handlePosition(event) {
   event.preventDefault();
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    alert = "Please share your Geolocation";
-  }
+    navigator.geolocation.getCurrentPosition(showPosition, function (e) {
+      alert(`Error message: ` + e.message + `.   Please check your settings and try again 😉`);
+    });
+  };
 }
-function showPosition(position) {
-  let latCur = position.coords.latitude;
-  console.log(latCur);
-  let longCur = position.coords.longitude;
-  console.log(longCur);
-  axios
-    .get(`${apiUrl}lat=${latCur}&lon=${longCur}&appid=${apiKey}&units=metric`)
-    .then(showCurrTemp);
-}
-
 let currentLocation = document.querySelector("button.btn-current");
 currentLocation.addEventListener("click", handlePosition);
 
+function showPosition(position) {
+  let latCur = position.coords.latitude;
+  let longCur = position.coords.longitude;
+  axios.get(`${apiUrl}lat=${latCur}&lon=${longCur}&appid=${apiKey}&units=metric`).then(showCurrTemp);
+}
+
 function showCurrTemp(response) {
+  classListCelsiusActive();
   let tempCur = document.querySelector(".current-temp");
   tempCur.innerHTML = `🌡️ ${Math.round(response.data.main.temp)}°<br /><span class="realFeel">feels like ${Math.round(response.data.main.feels_like)}°</span>`;
 
@@ -103,6 +104,14 @@ function showCurrTemp(response) {
   currentWind.innerHTML = `wind ${Math.round(response.data.wind.speed)} m/s`;
 
   getForecast(response.data.coord);
+  cityRemove();
+}
+
+function cityRemove() {
+  let cityElement = document.querySelector("#city-input");
+  if (cityElement.value != null) {
+    cityElement.value = null
+  };
 }
 
 function getForecast(coordinates) {
@@ -205,12 +214,11 @@ function getCelsius(event) {
 }
 
 let listCities = document.querySelectorAll('li');
-let cityinputList = document.querySelector('#city-input');
 listCities.forEach(function (listCity) {
   listCity.addEventListener("click", (event) => {
+    cityRemove();
     let displayCity = event.target.textContent;
-    cityinputList.setAttribute("value", `${displayCity}`);
     classListCelsiusActive();
-    axios.get(`${apiUrl}q=${cityinputList.value}&appid=${apiKey}&units=metric`).then(showCurrTemp);
+    axios.get(`${apiUrl}q=${displayCity}&appid=${apiKey}&units=metric`).then(showCurrTemp);
   });
 });
