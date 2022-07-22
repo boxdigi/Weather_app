@@ -40,20 +40,26 @@ input.search-city {
 }
 
 button.btn-search:hover {
-  background-color: rgb(156, 211, 211, 0.3);
+  background-color: rgb(156, 211, 211, 0.5);
   color: rgb(43, 67, 83, 0.75);
   cursor: pointer;
 }
 
+button.btn-search:active {
+  background-color: rgb(156, 211, 211, 0.3);
+  color: rgb(236, 110, 76);
+  font-size: 14px;
+}
+
 .btn-current {
-  color: rgba(43, 67, 83, 0.75);
+  color: rgba(48, 41, 41);
   font-size: 14px;
   height: auto;
   margin: 2px auto 2px 25px;
   padding: 5px;
   position: relative;
-  background-color: rgb(182, 225, 224, 0.7);
-  border: 1px solid rgb(182, 225, 224);
+  background-color: rgb(182, 225, 224);
+  border: 1px solid rgb(182, 225, 224, 0.8);
   border-radius: 5px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   font-family: "Libre Franklin", sans-serif;
@@ -62,8 +68,14 @@ button.btn-search:hover {
 
 button.btn-current:hover {
   background-color: rgb(182, 225, 224, 0.5);
-  color: rgb(43, 67, 83, 0.5);
+  color: rgb(43, 67, 83, 0.75);
   cursor: pointer;
+}
+
+button.btn-current:active {
+  background-color: rgb(182, 225, 224, 0.8);
+  color: rgb(236, 110, 76);
+  font-size: 13px;
 }
 
 ul {
