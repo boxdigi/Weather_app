@@ -299,6 +299,17 @@ p {
   text-decoration: none;
 }
 
+.github {
+  text-decoration: none;
+  color: rgb(105, 211, 211);
+}
+
+.github:hover {
+  text-decoration: underline;
+  color: rgb(79, 76, 236);
+  cursor: pointer;
+}
+
 .coder {
   text-decoration: none;
   color: rgb(105, 211, 211);
