@@ -320,3 +320,43 @@ p {
   color: rgb(236, 110, 76);
   cursor: pointer;
 }
+
+
+@media (max-width:500px) {
+  .container-full {
+    padding: 2px 2px 5px;
+    border: none;
+    max-width: fit-content;
+    box-shadow: none;
+  }
+
+  input.search-city {
+    width: 60%;
+    margin-right: 5px;
+  }
+
+  li {
+    font-size: 14px;
+    margin: 2px;
+  }
+
+  ul {
+    text-indent: 5px;
+    font-size: 14px;
+  }
+
+  .weather-forecast .column {
+    width: 55px;
+  }
+}
+
+@media(max-width:375px) {
+
+  .btn-current {
+    margin-left: 0;
+  }
+
+  .btn-search {
+    margin-left: 10px;
+  }
+}
